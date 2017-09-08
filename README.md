@@ -84,7 +84,7 @@ git commits and tags, and push the `.gem` file to
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at
-https://github.com/[USERNAME]/activemodel_type_symbol. This project is intended
+https://github.com/wecohere/activemodel_type_symbol. This project is intended
 to be a safe, welcoming space for collaboration, and contributors are expected
 to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of
 conduct.
@@ -98,4 +98,4 @@ License](http://opensource.org/licenses/MIT).
 
 Everyone interacting in the ActiveModel::Type::Symbol project’s codebases, issue
 trackers, chat rooms and mailing lists is expected to follow the [code of
-conduct](https://github.com/[USERNAME]/activemodel_type_symbol/blob/master/CODE_OF_CONDUCT.md).
+conduct](https://github.com/wecohere/activemodel_type_symbol/blob/master/CODE_OF_CONDUCT.md).
