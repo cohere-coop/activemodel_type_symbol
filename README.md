@@ -1,4 +1,6 @@
 # ActiveModel::Type::Symbol
+![Build
+Status](https://travis-ci.org/wecohere/activemodel_type_symbol.svg?branch=primary)
 
 Symbols! They're awesome! Sadly, converting an attribute from a string to a
 symbol and vice versa by hand is annoying, and validations don't quite work the
