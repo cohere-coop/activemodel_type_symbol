@@ -1,4 +1,4 @@
-# Activemodel::Type::Symbol
+# ActiveModel::Type::Symbol
 
 Symbols! They're awesome! Sadly, converting an attribute from a string to a
 symbol and vice versa by hand is annoying, and validations don't quite work the
@@ -32,6 +32,11 @@ Or install it yourself as:
 
 ## Usage
 
+#### Just... Hanging Out In The Ruby World
+`ActiveModel::Type::Symbol.new.cast("value") # => :value`
+
+
+#### In an ActiveRecord model
 ```
 class YourFancyModel < ApplicationRecord
   validates_inclusion_of :some_field, in: %i(one two three)
@@ -43,6 +48,24 @@ model = YourFancyModel.new(some_field: "one")
 model.some_field # => :one
 model.valid?     # => true
 ```
+## FAQ
+
+#### Your first example is basically `to_sym` but longer
+That's not a question. But yes, this safely wraps `to_sym` so that downstream
+consumers of ActiveModel can use `ActiveModel::Type.lookup(:symbol)` to do
+conversions.
+
+#### Wait so this needs ActiveRecord?
+Teeeccchnnicalllyyyyyy, no. `ActiveModel::Type` is theoretically generically
+useable!
+
+#### Why are you appending things to ActiveModel's namespace?
+Because I'm gonna submit this as a patch, but wanted to make it generally
+available before hand so people aren't forced to upgrade to get that sweet sweet
+`ActiveModel::Type::Symbol`y goodness
+
+#### Did you literally spend more time writing the README than you did the code?
+NO. Uhh... I mean... Yes.......
 
 ## Development
 
